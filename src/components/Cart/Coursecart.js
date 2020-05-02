@@ -2,6 +2,19 @@ import React, { Component } from 'react'
 import Heading from "../Reusable/Heading"
 import Img from "gatsby-image"
 
+const getCaty = edgeItems => {
+    //Here we are iterating through all the items in category Contentful
+    let holdItems = edgeItems.map(edgeItems => {
+        return edgeItems.node.category
+    })
+
+    let holdCategories = new Set(holdItems) //Here we select unique items from all
+    let categories = Array.from(holdCategories) //and made them into array
+    categories = ["all", ...categories]
+    //...categories meand all the items in the category gets concat to all
+    return categories
+}
+
 export default class Coursecart extends Component {
     constructor(props)
     {
@@ -9,8 +22,28 @@ export default class Coursecart extends Component {
         this.state={
             courses: props.courses.edges,
             mycourses: props.courses.edges,
+            mycategories : getCaty(props.courses.edges)
         }
     }
+
+    catyClicked = category => {
+        let keepallItemsSafe = [...this.state.courses]
+
+        if (category === 'all')
+        {
+            this.setState(() => {
+                return {mycourses: keepallItemsSafe}
+            })
+        }
+        else
+        {
+            let filteredItems = keepallItemsSafe.filter(({node}) => node.category === category)
+            this.setState(() => {
+                return {mycourses : filteredItems}
+            })
+        }
+    }
+
     render() {
         //console.log(this.state.courses);
 
@@ -18,6 +51,24 @@ export default class Coursecart extends Component {
             <section className="py-5">
                 <div className="container">
                     <Heading title="Courses"/>
+                    <div className="row my-3">
+                        <div className="col-10 mx-auto text-center">
+                            {
+                                this.state.mycategories.map((category, index) => {
+                                    return(
+                                        <button type="button" className="btn btn-info m-3 px-3"
+                                        key={index}
+                                        onClick={() => {
+                                            this.catyClicked(category)
+                                        }}
+                                        >
+                                            {category}
+                                        </button>
+                                    )
+                                })
+                            }
+                        </div>
+                    </div>
                     <div className="row">
                         {this.state.mycourses.map(({node})=> {
                             return(
