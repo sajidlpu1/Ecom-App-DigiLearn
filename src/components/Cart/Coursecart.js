@@ -10,7 +10,7 @@ const getCaty = edgeItems => {
 
     let holdCategories = new Set(holdItems) //Here we select unique items from all
     let categories = Array.from(holdCategories) //and made them into array
-    categories = ["all", ...categories]
+    categories = ["All", ...categories]
     //...categories meand all the items in the category gets concat to all
     return categories
 }
@@ -29,7 +29,7 @@ export default class Coursecart extends Component {
     catyClicked = category => {
         let keepallItemsSafe = [...this.state.courses]
 
-        if (category === 'all')
+        if (category === 'All')
         {
             this.setState(() => {
                 return {mycourses: keepallItemsSafe}
