@@ -7,11 +7,11 @@ export default function HeroSection({img, title, subtitle, heroclass}) {
         className = {heroclass}
         fluid = {img}
         >
-            <h1 className="text-white text-uppercase text-center display-4">
+            <h1 className="text-black text-center display-4 text-style">
             {title}
             </h1>
             <div>
-                <h4 className="text-warning">{subtitle}</h4>
+                <h4 className="text-primary mont">{subtitle}</h4>
             </div>
         </BackgroundImage>
     )

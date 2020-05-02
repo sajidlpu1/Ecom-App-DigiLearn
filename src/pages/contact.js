@@ -18,14 +18,14 @@ const ContactPage = ({data}) => (
     heroclass="about-background"
     />
 
-    <Infoblock heading="How can we help you?"/>
+
     <Contactcomp/>
   </Layout>
 )
 
 export const query = graphql`
 {
-  img: file(relativePath: {eq: "contact.png"}){
+  img: file(relativePath: {eq: "contact1.jpg"}){
     childImageSharp {
       fluid {
         ...GatsbyImageSharpFluid_tracedSVG

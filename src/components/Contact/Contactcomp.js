@@ -4,8 +4,7 @@ import Heading from '../Reusable/Heading'
 
 export default function Contactcomp() {
     return (
-        <section className="py-3">
-        <Heading title="Contact Us"/>
+        <section className="py-5 bg-theme">
         <div className="col-10 col-sm-8 mx-auto">
             <form action="https://formspree.io/xlepernq" method="POST">
                 <div className="form-group">
@@ -20,7 +19,7 @@ export default function Contactcomp() {
                 <div className="form-group">
                     <textarea className="form-control" type="text" name="description" id="description" placeholder="Your Message"/>
                 </div>
-                <button type="submit" className="btn btn-outline-info btn-block">Submit</button>
+                <button type="submit" className="btn btn-dark btn-block">Submit</button>
             </form>
         </div>
         </section>

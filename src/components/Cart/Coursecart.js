@@ -58,7 +58,7 @@ export default class Coursecart extends Component {
                             {
                                 this.state.mycategories.map((category, index) => {
                                     return(
-                                        <button type="button" className="btn btn-info m-3 px-3"
+                                        <button type="button" className="btn bg-theme m-3 px-3 text-white"
                                         key={index}
                                         onClick={() => {
                                             this.catyClicked(category)
@@ -87,13 +87,14 @@ export default class Coursecart extends Component {
                                             <small>{node.description}</small>
                                         </p>
                                         <button
-                                        className="btn btn-warning snipcart-add-item"
+                                        className="btn yellow-btn snipcart-add-item"
                                         data-item-id={node.id}
                                         data-item-name={node.title}
                                         data-item-price={node.price}
                                         data-item-url="https://digilearn.netlify.app/"
                                         data-item-image={node.image.fixed.src}>
-                                        <FaCartPlus className="cart-icon"/> Add to Cart
+                                        <FaCartPlus className="cart-icon"/>
+                                        Add to Cart
                                         </button>
                                     </div>
                                 </div>

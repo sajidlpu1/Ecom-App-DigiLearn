@@ -19,7 +19,7 @@ const AboutPage = ({data}) => (
     heroclass="about-background"
     />
     <DualInfoblock heading="A message from CEO"/>
-    <Infoblock heading="About Vision"/>
+    <Infoblock heading="About Our Company and Our Team "/>
     <Team/>
 
   </Layout>
@@ -27,7 +27,7 @@ const AboutPage = ({data}) => (
 
 export const query = graphql`
 {
-  img: file(relativePath: {eq: "about.png"}){
+  img: file(relativePath: {eq: "about123.jpg"}){
     childImageSharp {
       fluid {
         ...GatsbyImageSharpFluid_tracedSVG

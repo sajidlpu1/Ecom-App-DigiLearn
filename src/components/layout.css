@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap"');
+
 .bg-theme
 {
-  background-color: #035aa6;
+  background-color: #d19592;
+background-image: linear-gradient(315deg, #d19592 0%, #c81f70 74%);
 }
 
 .cart-icon
@@ -33,4 +38,64 @@
 .card
 {
   width: 18rem;
+}
+
+.text-style
+{
+
+  font-family: 'Fredoka One', cursive;
+}
+.text-style2
+{
+
+  font-family: 'Righteous', cursive;
+}
+
+.mont
+{
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+.yellow-btn
+{
+  background-color: #fbb034;
+background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+}
+
+.footer-one {
+  background-color: #142850;
+}
+
+.footer-two {
+  background-color: #274f9e;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+}
+
+.social-media {
+  margin: 16px 16px 30px 16px;
+}
+
+.fontSize
+{
+  font-size:1rem
+}
+
+.footer-icon
+{
+  font-size: 1.5em;
+  color: black;
+}
+
+.footer-bg
+{
+  padding: 2%;
+  background: #2980B9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right,#2980B9,#6DD5FA, #FFFFFF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2980B9,#6DD5FA, #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }

@@ -15,19 +15,19 @@ const IndexPage = ({data}) => (
     //Check out HeroSection from Reusable folder these are props
     img={data.img.childImageSharp.fluid}
     title="DigiLearn"
-    subtitle = "Learn new Skill Digitall"
+    subtitle = "Build a life you deserve"
     heroclass="hero-background"
     />
     <Infoblock heading="About Us"/>
     <Coursecart courses={data.courses} />
-    <DualInfoblock heading="Our Team"/>
+
 
   </Layout>
 )
 
 export const query = graphql`
 {
-  img: file(relativePath: {eq: "heromain.png"}){
+  img: file(relativePath: {eq: "titleimg.png"}){
     childImageSharp {
       fluid {
         ...GatsbyImageSharpFluid_tracedSVG
