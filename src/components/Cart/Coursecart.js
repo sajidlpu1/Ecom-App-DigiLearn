@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Heading from "../Reusable/Heading"
 import Img from "gatsby-image"
+import {FaCartPlus} from 'react-icons/fa'
+
 
 const getCaty = edgeItems => {
     //Here we are iterating through all the items in category Contentful
@@ -91,7 +93,7 @@ export default class Coursecart extends Component {
                                         data-item-price={node.price}
                                         data-item-url="https://digilearn.netlify.app/"
                                         data-item-image={node.image.fixed.src}>
-                                            Join Now
+                                        <FaCartPlus className="cart-icon"/> Add to Cart
                                         </button>
                                     </div>
                                 </div>
